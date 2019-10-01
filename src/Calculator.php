@@ -5,20 +5,37 @@ namespace App;
 class Calculator
 {
 
-    public function sum(...$values)
+    public function sum(float $a, float $b): float
     {
-        $s = 0;
-
-        foreach ($values as $value) {
-            $s += $value;
-        }
-
-        return $s;
+        return $a + $b;
     }
-
-    public function pow($base, $exp)
+    public function min(float $a, float $b): float
     {
-        return pow($base, $exp);
+        return $a - $b;
+    }
+    public function multiply(float $a, float $b): float
+    {
+        return $a * $b;
+    }
+    public function divide(float $a, float $b): float
+    {
+        return $a / $b;
+    }
+    public function percent(float $a, float $b): float
+    {
+        return $a % $b;
+    }
+    // public function equality(float $a, float $b): float
+    // {
+    //     return $a == $b;
+    // }
+    public function more(float $a, float $b): float
+    {
+        return $a > $b;
+    }
+    public function smaller(float $a, float $b): float
+    {
+        return $a < $b;
     }
 
 }
